@@ -1,9 +1,9 @@
 /// <reference types="cypress"/>
   
-//it('Google Search',() => {
+it('Google Search',() => {
 
-    //cy.visit('https://google.com')
-    //cy.get('#APjFqb').type('Automation step by step{Enter}')
+    cy.visit('https://google.com')
+    cy.get('#APjFqb').type('Automation step by step{Enter}')
 
     //cy.contains('Google Search').click
    it('keela',() => {
@@ -51,13 +51,23 @@ describe('Authenticated Test', () => {
       });
     
    
-   
-
-    // Click on the 'Contacts' link
+     // Click on the 'Contacts' link
     cy.get('#btn btn-sm btn-primary').click();
     //cy.get('#Add Contact').click();
-    
-    
+
+
+   
+      
+      
+      
+      
+      // simple test
+    describe('Google', () => {
+    it('Google Search',() => {
+
+        cy.visit('https://google.com')
+    //Assertions 
+    cy.title().should('eq', 'googlesearch') 
 
 
 });
