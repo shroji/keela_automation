@@ -68,8 +68,8 @@ describe('Authenticated Test', () => {
         cy.visit('https://google.com')
     //Assertions 
     cy.title().should('eq', 'googlesearch') 
-
-
+  //To search the locator need the selector hub and then serach for the class or id. if we used the id represent with # if class represent with .
+  
 });
 });
 
