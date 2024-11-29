@@ -56,12 +56,12 @@ describe('Authenticated Test', () => {
     //cy.get('#Add Contact').click();
 
 
-   
+    
       
       
+      New code
       
-      
-      // simple test
+      // simple test for the css locator using selector hub
     describe('Google', () => {
     it('Google Search',() => {
 
@@ -69,11 +69,38 @@ describe('Authenticated Test', () => {
     //Assertions 
     cy.title().should('eq', 'googlesearch') 
   //To search the locator need the selector hub and then serach for the class or id. if we used the id represent with # if class represent with .
-  
+  cy.get(".search_query").type("tshirts") // class tag is used
+   cy.get("#search_query").type("tshirts") // id tag is used
+   cy.get("[name='search_query']").tye("tshpirts") // attribute tag is used  (since the attribute may be the placeholder, name ,value) 
 });
+});
+  // test using the xpath in selector hub( for this nedd to add the xpath plugin
+      it('finds list items', () => {
+  cy.xpath('//ul[@class="todo-list"]//li').should('have.length', 3);
 });
 
 
-    
+    for own project
+        describe('OCR', () => {
+    it('OCR',() => {
+
+      cy.visit('https://.......')
+      cy.get(".ant-btn").click()
+      cy.ul(
+
+  for the implicit assertions
+      cy.url().should('include','azurestaticapps.net')
+      cy.url().should('eq',.......url)
+      cy.url().should('contain','azurestaticapps')
+
+      //and assertions
+      cy.url().should('include','azurestaticapps.net')
+      .and('contain','....')-
+
+        // through the cypress we can use the locator
+        cy.get('//locator copy through the cypress').should('be.visible')
+        .and('exist') 
+
+      
 })
 
